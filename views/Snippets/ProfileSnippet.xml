@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_profile_snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="website_task.profile"></t>
+        </xpath>
+    </template>
+    <template
+        id="profile" name="Custom Profile Card">
+        <section class="container">
+            <h2 style="text-align:center">User Profile Card</h2>
+            <div class="card">
+                <h1>John Doe</h1>
+                <p class="title">CEO &amp; Founder, Example</p>
+                <p>Harvard University</p>
+                <div style="margin: 24px 0;">
+                    <a href="#">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </div>
+                <p>
+                    <button>Contact</button>
+                </p>
+            </div>
+        </section>
+    </template>
+</odoo>

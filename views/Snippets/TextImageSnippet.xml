@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="inherit_text_image_snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="website_task.text_image" />
+        </xpath>
+    </template>
+    <template id="text_image" name="Custom Text Image">
+        <section class="s_text_image pt32 pb32">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 pt16 pb16">
+                        <h2>A Section Subtitle</h2>
+                        <p>Write one or two paragraphs describing your product or services. To be
+                            successful your content needs to be useful to your readers.</p>
+                        <p>Start with the customer – find out what they want and give it to them.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary mb-2">Learn more</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-6 pt16 pb16">
+                        <img src="website_task/static/src/img/img.png" class="img img-fluid mx-auto" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+</odoo>
