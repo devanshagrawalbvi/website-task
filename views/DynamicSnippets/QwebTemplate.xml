@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <templates xml:space="preserve">
+    <t t-name="qwebtemplate">
+        <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="data:image/png;base64,${emp.eprofile}"/>
+              <div class="card-body">
+                <h5 class="card-title"><t t-out="ename"/></h5>
+                    <br/>Emp Code -${emp.ecode}</h5>
+                <p class="card-text">${emp.emonthlysalary} - ${emp.esalary}</p>
+                <a href="#" class="btn btn-primary">Contact</a>
+              </div>
+          </div>
+    </t>
+</templates> -->
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<odoo>
+    <template id="website_task.qwebtemplate" name="Snippet Template">
+        <div class="emp-data-1">
+            <h2>List of Items:</h2>
+            <ul>
+                <t t-foreach="items" t-as="item">
+                    <li><t t-esc="item.ename" /></li>
+                </t>
+            </ul>
+        </div>
+    </template>
+    
+</odoo>

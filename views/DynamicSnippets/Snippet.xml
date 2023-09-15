@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="custom_snippets" inherit_id="website.snippets" name="Custom Dynamic Snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="before">
+            <div id="snippet_structure" class="o_panel">
+                <div class="o_panel_header">Custom Dynamic Snippets</div>
+                <div class="o_panel_body">
+                    <t t-snippet="website_task.employee_info">
+                    </t>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
