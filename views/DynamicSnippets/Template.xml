@@ -13,12 +13,4 @@
             </div>
         </section>
     </template>
-
-    <!-- To be used in JS for snippet options -->
-    <template id="employee_info_options" inherit_id="website.snippet_options">
-        <xpath expr="//div[@data-js='Box']" position="before">
-            <div data-js="ExploreCitiesOptions" data-selector=".emp-data" data-drop-in=".o_mega_menu nav">
-            </div>
-        </xpath>
-    </template>
 </odoo>

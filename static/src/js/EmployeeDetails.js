@@ -15,7 +15,6 @@ publicWidget.registry.EmpDetail = publicWidget.Widget.extend({
         data.forEach((emp) => {
           html += `
           <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="data:image/png;base64,${emp.eprofile}">
               <div class="card-body">
                 <h5 class="card-title">${emp.ename} <br/>Emp Code -${emp.ecode}</h5>
                 <p class="card-text">${emp.emonthlysalary} - ${emp.esalary}</p>
