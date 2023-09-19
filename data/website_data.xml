@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="website_task.carousel_img_1" model="ir.attachment">
+            <field name="public" eval="True" />
+            <field name="name">image1.png</field>
+            <field name="type">url</field>
+            <field name="url">/website_task/static/src/img/image1.jpg</field>
+        </record>
+        <record id="website_task.carousel_img_2" model="ir.attachment">
+            <field name="public" eval="True" />
+            <field name="name">image2.png</field>
+            <field name="type">url</field>
+            <field name="url">/website_task/static/src/img/image2.jpg</field>
+        </record>
+    </data>
+</odoo>

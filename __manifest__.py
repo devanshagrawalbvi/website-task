@@ -6,7 +6,8 @@
     'depends': ['base', 'website'],
     'assets': {
         'web.assets_frontend': [
-            'website_task/static/src/js/EmployeeDetails.js',
+            # 'website_task/static/src/js/EmployeeDetails.js',
+            'website_task/static/src/js/EmployeeForm.js',
             'website_task/static/src/scss/style.scss',
             "website_task/static/src/img/snippets/img.png",
         ],
@@ -23,7 +24,7 @@
         "views/DynamicSnippets/Template.xml",
         # "views/DynamicSnippets/QwebTemplate.xml",
         "views/DynamicSnippets/Snippet.xml",
-
+        "data/website_data.xml",
         "data/menu.xml",    
         "views/CustomFormTemplate.xml",
         "views/success.xml",

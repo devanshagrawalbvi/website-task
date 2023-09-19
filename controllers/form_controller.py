@@ -8,19 +8,18 @@ class CustomForm(http.Controller):
         print("WERTYU------------------")
         return http.request.render("website_task.custom_form_template", {})
     
-    @http.route(['/employee/data/submit'], type='http', auth="user", website=True, csrf=False)
+    @http.route(['/employee/data/submit'], type='json', auth="public")
     def customer_form_submit(self,**post):
+        try:
+            if request.env.user.id == 4:
+                return {'message': 'Login Required', 's_tatus':False, 'body':'Please Login or Signup '}
 
-        if request.env.user.partner_id:
-            employee = http.request.env['employee.data'].sudo().create({
-                'ecode': post.get('empcode'),
-                'ename': post.get('name'),
-                'emonthlysalary': post.get('salary'),
+            request.env['employee.data'].create({
+                'ecode': post.get('ecode'),
+                'ename': post.get('ename'),
             })
-            vals = {
-                'employee': employee,
-            }
+            return {'message': 'Data submitted successfully..', 's_tatus':True, 'body':'Your data has been submitted successfully!'}
 
-            return request.render("website_task.success_template", vals)
-        else:
-            return "Please register or login..."
+        except:
+
+            return {'message': 'Data Cannot be submitted', 's_tatus':True, 'body':'Technical Error.'}
