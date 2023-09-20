@@ -10,6 +10,7 @@
                         <li t-attf-data-bs-target="#myCarousel{{uniq}}" data-bs-slide-to="0"
                             class="active" />
                         <li t-attf-data-bs-target="#myCarousel{{uniq}}" data-bs-slide-to="1" />
+                        <li t-attf-data-bs-target="#myCarousel{{uniq}}" data-bs-slide-to="2" />
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active oe_img_bg o_bg_img_center pt152 pb152"
@@ -34,6 +35,21 @@
                                         class="carousel-content col-lg-8 offset-lg-2 bg-black-50 text-center pt48 pb40">
                                         <h2>
                                             <font style="font-size: 62px;">Slide 2</font>
+                                        </h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item oe_img_bg o_bg_img_center pt96 pb96"
+                            style="background-image: url('/web/image/website_task.carousel_img_2');"
+                            data-name="Slide">
+                            <div class="container oe_unremovable">
+                                <div class="row content">
+                                    <div
+                                        class="carousel-content col-lg-8 offset-lg-2 bg-black-50 text-center pt48 pb40">
+                                        <h2>
+                                            <font style="font-size: 62px;">Slide 3</font>
                                         </h2>
 
                                     </div>
