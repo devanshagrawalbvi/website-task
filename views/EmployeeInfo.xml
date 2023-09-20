@@ -8,7 +8,7 @@
                 <field name="ename" />
                 <field name="ecode" />
                 <field name="emonthlysalary" />
-                <!-- <field name="esalary" /> -->
+                <field name="esalary" />
                 <field name="eprofile" />
             </tree>
         </field>
@@ -24,7 +24,7 @@
                         <field name="ename" />
                         <field name="ecode" />
                         <field name="emonthlysalary" />
-                        <!-- <field name="esalary" /> -->
+                        <field name="esalary" />
                         <field name="eprofile" />
                     </group>
 

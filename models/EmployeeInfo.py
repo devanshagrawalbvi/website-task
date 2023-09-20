@@ -8,8 +8,8 @@ class Employee(models.Model):
     ecode = fields.Integer(string="Employee Employee Code")
     eprofile = fields.Binary(string="Employee Profile Image")
     emonthlysalary = fields.Integer(string="Employee Monthly Salary") 
-    # esalary = fields.Integer(string="Employee Monthly Salary",compute="_cal_salary") 
+    esalary = fields.Integer(string="Employee Monthly Salary",compute="_cal_salary") 
 
-    # @api.depends('emonthlysalary')
-    # def _cal_salary(self):
-    #     self.esalary = self.emonthlysalary * 12
+    @api.depends('emonthlysalary')
+    def _cal_salary(self):
+        self.esalary = self.emonthlysalary * 12

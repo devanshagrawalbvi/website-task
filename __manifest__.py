@@ -27,8 +27,6 @@
         "data/website_data.xml",
         "data/menu.xml",    
         "views/CustomFormTemplate.xml",
-        "views/success.xml",
-        # "views/SuccessPopup.xml",
         "views/EmployeeInfo.xml",
         "views/menu.xml",
 

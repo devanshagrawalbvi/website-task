@@ -3,10 +3,6 @@
   border: 1px solid black;
   border-style: solid;
 }
-// table td {
-//   padding: 5px;
-//   border: 1px solid black;
-// }
 
 .etablehead {
   background-color: lightgreen;
@@ -14,48 +10,10 @@
   font-weight: 800;
 }
 
-.qwerty {
-  background-color: lightcyan;
-}
-
 .custom_slider {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.custom_slider_image {
-  height: 100%;
-}
-
-.modal {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(254, 126, 126, 0.7);
-  transition: all 0.4s;
-  visibility: hidden;
-  opacity: 0;
-}
-.content {
-  position: absolute;
-  background: white;
-  width: 400px;
-  padding: 1em 2em;
-  border-radius: 4px;
-}
-.modal:target {
-  visibility: visible;
-  opacity: 1;
-}
-.box-close {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  color: #fe0606;
-  text-decoration: none;
-  font-size: 30px;
-}
+// .custom_slider_image {
+//   height: 100%;
+// }

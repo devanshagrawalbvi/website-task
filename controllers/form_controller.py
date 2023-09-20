@@ -12,14 +12,15 @@ class CustomForm(http.Controller):
     def customer_form_submit(self,**post):
         try:
             if request.env.user.id == 4:
-                return {'message': 'Login Required', 's_tatus':False, 'body':'Please Login or Signup '}
+                return {'message': 'Login/ SignUp', 's_tatus':False, 'body':'Please Login or Signup '}
 
             request.env['employee.data'].create({
                 'ecode': post.get('ecode'),
                 'ename': post.get('ename'),
+                'emonthlysalary': post.get('emonthlysalary'),
             })
-            return {'message': 'Data submitted successfully..', 's_tatus':True, 'body':'Your data has been submitted successfully!'}
+            return {'message': 'Data Saved', 's_tatus':True, 'body':'Data saved successfully!'}
 
         except:
 
-            return {'message': 'Data Cannot be submitted', 's_tatus':True, 'body':'Technical Error.'}
+            return {'message': 'Error', 's_tatus':True, 'body':'Error'}

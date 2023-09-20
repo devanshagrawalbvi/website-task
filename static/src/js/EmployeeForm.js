@@ -1,6 +1,7 @@
 /** @odoo-module **/
 import publicWidget from "web.public.widget";
-publicWidget.registry.formButtonDevansh = publicWidget.Widget.extend({
+"use strict";
+publicWidget.registry.formSubmitButton = publicWidget.Widget.extend({
   selector: "#wrapwrap",
   events: {
     "click #sub_button": "click",
@@ -10,17 +11,16 @@ publicWidget.registry.formButtonDevansh = publicWidget.Widget.extend({
 
     this._rpc({
       route: "/employee/data/submit",
-      params: { ename: "Devansh", ecode: "0000" },
+      params: { ecode: this.$el.find("#myForm")[0][0].value, ename: this.$el.find("#myForm")[0][1].value, emonthlysalary: this.$el.find("#myForm")[0][2].value},
     }).then((data) => {
-      console.log(data, "sdfghjkldfghjkl");
+      // console.log(data, "sdfghjkldfghjkl");
       var popup = this.$el.find("#popupmodal");
-      console.log(popup, "ppp");
+      popup.modal("show");
       this.$el.find("#exampleModalLabel")[0].innerHTML = data.message;
       this.$el.find("#modal-body")[0].innerHTML = data.body;
       console.log(data.s_tatus);
-      popup.modal("show");
       if (data.s_tatus) {
-        this.$el.find("#submit_form")[0].innerHTML = "OKAY";
+        this.$el.find("#submit_form")[0].innerHTML = "Close";
         this.$el.find("#submit_form")[0].onclick = function () {
           popup.modal("hide");
         };
@@ -30,6 +30,10 @@ publicWidget.registry.formButtonDevansh = publicWidget.Widget.extend({
         this.$el.find("#submit_form")[0].onclick = function () {
           window.location = "http://localhost:8069/web/login";
         };
+        // this.$el.find("#submit_form")[0].innerHTML = "Sign Up";
+        // this.$el.find("#submit_form")[0].onclick = function () {
+        //   window.location = "http://localhost:8069/web/signup";
+        // };
       }
     });
   },
