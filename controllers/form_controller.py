@@ -4,12 +4,12 @@ from odoo.http import request
 
 class CustomForm(http.Controller):
     @http.route(['/employee/form'], type='http', auth="public", website=True, csrf=False)
-    def custom_form(self, **post):
+    def custom_form(self):
         print("WERTYU------------------")
         return http.request.render("website_task.custom_form_template", {})
     
     @http.route(['/employee/data/submit'], type='json', auth="public")
-    def customer_form_submit(self,**post):
+    def employee_register(self,**post):
         try:
             if request.env.user.id == 4:
                 return {'message': 'Login/ SignUp', 's_tatus':False, 'body':'Please Login or Signup '}

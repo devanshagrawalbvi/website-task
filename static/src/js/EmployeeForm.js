@@ -1,6 +1,6 @@
 /** @odoo-module **/
 import publicWidget from "web.public.widget";
-"use strict";
+("use strict");
 publicWidget.registry.formSubmitButton = publicWidget.Widget.extend({
   selector: "#wrapwrap",
   events: {
@@ -8,12 +8,14 @@ publicWidget.registry.formSubmitButton = publicWidget.Widget.extend({
   },
   click(e) {
     e.preventDefault();
-
     this._rpc({
       route: "/employee/data/submit",
-      params: { ecode: this.$el.find("#myForm")[0][0].value, ename: this.$el.find("#myForm")[0][1].value, emonthlysalary: this.$el.find("#myForm")[0][2].value},
+      params: {
+        ecode: this.$el.find("#myForm")[0][0].value,
+        ename: this.$el.find("#myForm")[0][1].value,
+        emonthlysalary: this.$el.find("#myForm")[0][2].value,
+      },
     }).then((data) => {
-      // console.log(data, "sdfghjkldfghjkl");
       var popup = this.$el.find("#popupmodal");
       popup.modal("show");
       this.$el.find("#exampleModalLabel")[0].innerHTML = data.message;
